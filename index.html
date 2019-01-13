@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <!--Reset Css-->
+  <link rel="stylesheet" href="/Users/princessa.wilson/giphySearch/asset/reset.css">
+  <!--jQuery-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!--Bootstrap-->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+    crossorigin="anonymous">
+  <!-- Firebase Reference -->
+  <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="jumbotron container bg-success col-md-9 center text-center">
+      <h1 class="display-4">Chugga Chugga, Choo Choo!</h1>
+      <p>Realtime train arrivals and departures.</p>
+    </div>
+    <!--jumbotron </div>-->
+
+    <div class="row">
+
+      <div class="col-md-12">
+        <div class="card mb-4">
+          <div class="card-header">Current Train Schedule</div>
+          <div class="card-body">
+            <table class="table table-sm table-hover" id='employee-table'>
+              <thead>
+                <tr>
+
+
+              <tbody>
+                <thead>
+                  <tr>
+
+                    <th id="name-tr">Train name</th>
+                    <th id="lugar">Destination</th>
+                    <th id="freq">Frequency(min)</th>
+                    <th id="arv">Next arrivals</th>
+                    <th id="mins">Minutes Away</th>
+                  </tr>
+                </thead>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>Mark</td>
+                  <td>Otto</td>
+                  <td>Otto</td>
+                  <td>Otto</td>
+                  
+                </tr>
+                <tr>
+                  <th scope="row">2</th>
+                  <td>Jacob</td>
+                  <td>Thornton</td>
+                  <td>Thornton</td>
+                  <td>Thornton</td>
+
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td id="newTrain"></td>
+                    
+  
+                  </tr>
+              </tbody>
+            </table>
+          </div>
+          <!--card-body div-->
+        </div>
+        <!--card mb-4-->
+      </div>
+      <!--col-md-12-->
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="col-mb-4">
+
+
+          <div class="card-header">Add train</div>
+
+          <div class="card-body">
+
+            <form>
+              <div class="form-group">
+                <label for="formGroupExampleInput">Train Name</label>
+                <input type="text" class="form-control" id="formGroupExampleInput">
+              </div>
+              <!--form-group
+              -->
+              <div class="form-group">
+                <label for="formGroupExampleInput2">Destination</label>
+                <input type="text" class="form-control" id="formGroupExampleInput2">
+              </div>
+              <!--form-group-->
+              <div class="form-group">
+                <label for="formGroupExampleInput">First Train Time (HH:mm - military time)</label>
+                <input type="text" class="form-control" id="formGroupExampleInput">
+              </div>
+              <!--form-group
+                -->
+              <div class="form-group">
+                <label for="formGroupExampleInput2">Frequency(min)</label>
+                <input type="text" class="form-control" id="formGroupExampleInput2">
+              </div>
+              <!--form-group-->
+            </form>
+            <!-- row -->
+            <div class="form-group row">
+              <div class="col-sm-10 ">
+                <button type="submit" class="btn btn-primary" id="submit-addTrain">Submit</button>
+              </div>
+            </div>
+            <!--card-body-->
+          </div>
+          <!--col-mb-4-->
+        </div>
+        <!--col-md-12-->
+
+
+
+
+      </div>
+
+    </div>
+    <!--container-->
+
+
+
+
+    
+
+
+
+
+
+    <!--Child-->
+    <script>
+
+  //Firebase configuration
+  var config = {
+    apiKey: "AIzaSyBykrSoT9CbcnvY4b2FFnoC6Ibys4PTVV0",
+    authDomain: "my-unique-project-a344c.firebaseapp.com",
+    databaseURL: "https://my-unique-project-a344c.firebaseio.com",
+    projectId: "my-unique-project-a344c",
+    storageBucket: "my-unique-project-a344c.appspot.com",
+    messagingSenderId: "136102651500"
+  };
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+    <script src="assets/javascript/app.js"></script>
+
+
+
+</body>
+
+</html>
