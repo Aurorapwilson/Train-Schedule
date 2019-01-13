@@ -12,12 +12,13 @@ console.log(config);
 
 var ref = firebase.database().ref('Trains');
 
-// Grabs train info
-// let trainName = $('#name-tr').val().trim() ;
-// let trainDestination = $('#lugar').val().trim();
-// let trainFreq = $('#freq').val().trim() ;
-// let train_nextArr = $('#arv').val().trim() ;
-// let train_minAway = $('#mins').val().trim() ;
+//variables for  train info
+let trainName;
+let trainDestination;
+let trainFreq;
+let train_nextArr;
+
+
 
 
 
@@ -25,22 +26,19 @@ var ref = firebase.database().ref('Trains');
 $("#submit-addTrain").on("click", function addNewTrain() {
   // takes information from form and stores it in firebase
   firebase.database().ref().update({
-    // Grabs train info
-    name: (
-      trainName = $('#name-tr').val()
+    name:(
+    trainName = $("#Input1").val().trim()
     ),
     destination: (
-      trainDestination = $('#lugar').val().trim()
+    trainDestination = $("#Input2").val().trim()
     ),
-    frequency: (
-      trainFreq = $('#freq').val().trim()
-      ),
-    arrival: (
-      train_nextArr = $('#arv').val().trim()
-      ),
-    eta: (
-      train_minAway = $('#mins').val().trim()
-      )
+    frequency : (
+    trainFreq = $("#Input3").val().trim()
+    ),
+    arrival : (
+    train_nextArr = $("#Input4").val().trim()
+    )
   });
+
   console.log(addNewTrain);
 });
